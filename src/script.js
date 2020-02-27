@@ -4,34 +4,9 @@ createTheModal = () => {
   // Get the <span> element that closes the modal
   const span = document.getElementsByClassName("close")[0];
 
-  // When the user clicks on the button, open the modal
-  globalButton.onclick = () => {
-    modal.style.display = "block";
-    const ol = document.getElementById("modalInformation");
-    const li = document.createElement("li");
-    ol.appendChild(li);
-    const globalInfo = document.createTextNode('Starting March 29, 2020');
-    const globalGoal = document.createTextNode('DEMO PROJECT')
-    li.append(globalInfo);
-    li.append(globalGoal);
-  }
-
-  wozButton.onclick = () => {
-    modal.style.display = "block";
-    const wozOl = document.getElementById("wozModalInformation");
-    const wozLi = document.createElement("li");
-    wozOl.appendChild(wozLi);
-    const wozInfo = document.innerHTML('Graduated November 5, 2018 With a full stack Certificate');
-    wozLi.append(wozInfo);
-  }
-
-  mpgButton.onclick = () => {
-    modal.style.display = "block";
-  }
-
-  // When the user clicks on <span> (x), close the modal
   span.onclick = () => {
     modal.style.display = "none";
+    console.log('modal', modal);
   }
 
   // When the user clicks anywhere outside of the modal, close it
@@ -40,17 +15,67 @@ createTheModal = () => {
       globalModal.style.display = "none";
     }
   }
+  console.log('window', window);
 }
 
-let modalInformation = document.getElementById("modalInformation")
-console.log('modalInformation', modalInformation);
+globalInfo = () => {
 
+  modal.style.display = "block";
+  //Create Basic information about school
+  const createDiv = document.createElement('div');
+  const info = document.getElementById("modalInformation");
+  const paragraph = document.createElement("p");
+  createDiv.appendChild(paragraph);
+  const globalInfo = document.createTextNode('Starting March 29, 2020');
+  info.append(globalInfo);
+  //Link to final Project
+  const linkToFinalProjectDiv = document.createElement('div')
+  const linkInfo = document.getElementById("linkToProject");
+  const linkToProject = document.createElement("a");
+  linkToProject.setAttribute('href', "https://github.com/JLMartinez1980");
+  linkToProject.innerText = 'final Project';
+  linkToFinalProjectDiv.appendChild(linkToProject);
+  linkInfo.append(linkToProject);
+  console.log("createDiv", createDiv);
+}
 
 const globalButton = document.getElementById("globalButton");
-globalButton.addEventListener('click', createTheModal);
+globalButton.addEventListener('click', globalInfo);
 
-const wozButton = document.getElementById("wozButton");
-wozButton.addEventListener('click', createTheModal);
+
+bethelInfo = () => {
+
+  modal.style.display = "block";
+  //Create Basic information about school
+  const date = document.getElementById("modalInformation");
+  const globalInfo = document.createTextNode('April 2018- November 2018');
+  date.append(globalInfo);
+
+  const info = document.createElement("P")
+  const text = document.createTextNode('Received a certificate in the full-stack' + 
+  'program focusing on JavaScript. Covered a number of different topics both' +
+  'related to front-end as well as the back end of development.');
+  info.appendChild(text);
+  date.append(info);
+
+
+
+
+
+  //Link to final Project
+  const linkToFinalProjectDiv = document.createElement('div')
+  const linkInfo = document.getElementById("linkToProject");
+  const linkToProject = document.createElement("a");
+  linkToProject.setAttribute('href', "https://github.com/JLMartinez1980");
+  linkToProject.innerText = 'final Project';
+  linkToFinalProjectDiv.appendChild(linkToProject);
+  linkInfo.append(linkToProject);
+
+
+}
+
+const bethelButton = document.getElementById("bethelButton");
+bethelButton.addEventListener('click', bethelInfo);
 
 const mpgButton = document.getElementById("marketPlace");
 mpgButton.addEventListener('click', createTheModal);
