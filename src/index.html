@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -22,33 +25,123 @@
         </div>
       </div>
     </header>
-    <div class="education">
+    <div class="container">
       <h2>Education</h2>
-      <button id="globalButton">U of A Global Campus</button>
-      <!-- The Modal -->
-        <div id="modal" class="globalModal">
-          <!-- Modal content -->
+
+      <!--University of Arkansas Global Campus -->
+        <!-- Trigger the modal with a button -->
+      <button id="globalCampus" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#globalModalInformation">GLOBAL CAMPUS</button>
+      <!-- Modal -->
+      <div class="modal fade" id="globalModalInformation" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
           <div class="modal-content">
-            <span class="close">&times;</span>
-            <p  id="modalInformation"></p>
-            <a id="linkToProject" href="https://github.com/JLMartinez1980"></a>
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Starting March 29, 2020</h4>
+            </div>
+            <div id="globalInfo" class="modal-body">
+              <h2>This is what I've learned</h2>
+                <ol>
+                  <li>JavaScript</li>
+                  <li>Angular</li>
+                </ol>
+              <a href="https://github.com/JLMartinez1980">Future link to my final project</a>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
           </div>
         </div>
-    <button id="bethelButton">Bethel Tech</button>
-    <ol  id="wozModalInformation"></ol>
+      </div>
+
+    <!--Bethel Tech -->
+      <!-- Trigger the modal with a button -->
+    <button id="bethelTech" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#bethelTechInformation">BETHEL TECH</button>
+    <!-- Modal -->
+    <div class="modal fade" id="bethelTechInformation" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div id="bethelTechInformation" class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">April - November 2018</h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              Bethel Tech offered full stack program through WOZ-U. Bethel Tech also focussed on character development, focussed on building and
+              enriching community, maintaining intergrity in all situations,team building through communication and trust, as well as equipping us
+              to passionatley pursue our dreams.
+            </p>
+            <p>
+              WOZ-U was the technical school, in which it was a front end full stack program. During the six month program, we learned a variety of topics
+              both dealing with the front-end, back-end, mobile, web-security, and deploymnet.
+            </p>
+              <ol>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Angular TS</li>
+                <li>Ionic Cordova</li>
+                <li>Version Control</li>
+                <li>AWS</li>
+              </ol>
+              <div class="">
+                <a href="https://thecollectiveapp.herokuapp.com/ ">The Collective Final Project</a>
+                <p>
+                  We used The MERN stack to complete this project.
+                  My Tasks were writing the code to edit both the comments and the posts, and to ensure all of our routes were correct.
+                </p>
+              </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="experience">
-      <h2>Work/Experience</h2>
-        <button id="marketPlace">Market Place Grill</button>
+    <div class="container">
+      <h2>Work History</h2>
+
+      <!--MarketPlace -->
+        <!-- Trigger the modal with a button -->
+      <button id="marketPlace" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#marketPlaceInformation">MarketPlace Grill</button>
+      <!-- Modal -->
+      <div  class="modal fade" id="marketPlaceInformation" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">January 2011 - Present</h4>
+            </div>
+            <div id="marketPlaceInformation" class="modal-body">
+              <div class="">
+                <ol>
+                    <li>Training team 7 years</li>
+                    <li>Lead trainer 3 years</li>
+                    <li>Assistant manager 1.5 years</li>
+                  </ol>
+              </div>
+              <div class="">
+                <ul>
+                  <li>Communication: Able to take complex concepts and explain them in a way that can be easily understood and implemented.</li>
+                  <li>
+                    Collaboration: Working with both management and training teams to devise best practices, implement changes in the
+                    training structure, and keep a detailed record of progress made by new hires.
+                  </li>
+                  <li>I have helped train 100+ employees in a variety of positions during my time here</li>
+                </ul>
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="hobbies">
-      <h2>Hobbies</h2>
-      <ol>
-        <li><button type="button" name="button">Market Place Grill</button></li>
-        <li><button type="button" name="button">Market Place Grill</button></li>
-        <li><button type="button" name="button">Market Place Grill</button></li>
-      </ol>
-    </div>
-    <script src="script.js" type="text/javascript"></script>
-  </body>
+  <script src="script.js" type="text/javascript"></script>
+</body>
 </html>
